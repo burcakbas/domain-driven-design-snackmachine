@@ -6,4 +6,9 @@
     <RootNamespace>SnackMachines.Common</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+    <PackageReference Include="NHibernate" Version="5.2.0" />
+  </ItemGroup>
+
 </Project>

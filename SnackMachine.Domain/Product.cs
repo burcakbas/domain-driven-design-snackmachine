@@ -1,10 +1,9 @@
-﻿using System;
+﻿using SnackMachines.Common;
 using System.Collections.Generic;
-using System.Text;
 
 namespace SnackMachines.Domain
 {
-    public sealed class Product
+    public sealed class Product : Entity
     {
         public int ProductId { get; }
         public string Name { get; }
@@ -12,12 +11,13 @@ namespace SnackMachines.Domain
 
         public Product(string name, decimal price)
         {
-            this.Name = name;
-            this.Price = price;
+            Name = name;
+            Price = price;
         }
 
         public static IList<Product> GetProducts()
         {
+            //ToDo: get from db
             var products = new List<Product>
             {
                 new Product("Çokonat", 1),

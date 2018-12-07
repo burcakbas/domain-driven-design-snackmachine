@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using SnackMachines.Common;
+using System.Collections.Generic;
 
 namespace SnackMachines.Domain
 {
-    public class Slot
+    public class Slot : Entity
     {
         public int Index { get; set; }
         public ICollection<Product> Products { get; set; }
@@ -12,6 +13,6 @@ namespace SnackMachines.Domain
             Products = new List<Product>(5);
         }
 
-        //buySnack , product adedini azaltacak
+        //ToDo: buySnack , product adedini azaltacak
     }
 }

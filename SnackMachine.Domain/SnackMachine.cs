@@ -1,13 +1,11 @@
 ﻿using SnackMachines.Common;
 using SnackMachines.SharedKernel;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace SnackMachines.Domain
 {
-    public sealed class SnackMachine : Entity
+    public sealed class SnackMachine : Entity, IAggregateRoot
     {
         public Money MoneyInside { get; private set; } = Money.None;
         public Money MoneyInTransaction { get; private set; } = Money.None;
@@ -29,11 +27,6 @@ namespace SnackMachines.Domain
         {
             MoneyInside -= MoneyInTransaction;
             MoneyInTransaction = Money.None;
-        }
-
-        public void InitSlots()
-        {
-
         }
 
         public bool ValidateSlot(int slotIndex)
