@@ -3,6 +3,7 @@ using SnackMachines.SharedKernel;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SnackMachines.Domain
 {
@@ -10,11 +11,13 @@ namespace SnackMachines.Domain
     {
         public Money MoneyInside { get; private set; } = Money.None;
         public Money MoneyInTransaction { get; private set; } = Money.None;
-        public IList<Slot> Slots { get; }
+        public IList<Slot> Slots { get; internal set; }
+        public int SlotCapacity { get; }
 
-        public SnackMachine()
+        internal SnackMachine(IList<Slot> slots)
         {
-            Slots = new List<Slot>(15);
+            Slots = slots;
+            SlotCapacity = slots.Count;
         }
         public void InsertMoney(Money money)
         {
@@ -28,14 +31,19 @@ namespace SnackMachines.Domain
             MoneyInTransaction = Money.None;
         }
 
+        public void InitSlots()
+        {
+
+        }
+
         public bool ValidateSlot(int slotIndex)
         {
             return Slots[slotIndex].Products.Count > 0;
         }
 
-        //public bool ValidateSlots()
-        //{
-        //    return Slots.vali
-        //}
+        public bool ValidateSlots()
+        {
+            return SlotCapacity == Slots.Count && Slots.All(x => x.Products.Count > 0);
+        }
     }
 }

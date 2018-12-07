@@ -10,7 +10,8 @@ namespace SnackMachines.Domain.Operators
             for (int i = 0; i < snackMachine.Slots.Count; i++)
             {
                 var slot = snackMachine.Slots[i];
-                slot.Products.Add(products[i % 4]);
+                var product = products[i % 4];
+                slot.Products.Add(product);
             }
         }
     }

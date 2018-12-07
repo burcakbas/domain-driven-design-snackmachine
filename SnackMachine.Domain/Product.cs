@@ -12,7 +12,8 @@ namespace SnackMachines.Domain
 
         public Product(string name, decimal price)
         {
-
+            this.Name = name;
+            this.Price = price;
         }
 
         public static IList<Product> GetProducts()

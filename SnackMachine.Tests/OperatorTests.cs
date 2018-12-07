@@ -1,38 +1,39 @@
 ﻿using SnackMachines.Domain;
 using SnackMachines.Domain.Operators;
 using Xunit;
+using FluentAssertions;
 
 namespace SnackMachines.Tests
 {
     public class OperatorTests
     {
+        [Fact]
         public void validate_slots_()
         {
-            var sm = new SnackMachine();
-            Assert.True(sm.ValidateSlot(1));
-            
+            var sm = SnackMachineFactory.Create();
+            sm.ValidateSlots().Should().BeTrue();
         }
 
         [Fact]
         public void load_products()
         {
             var op = new Operator();
-            var sm = new SnackMachine();
+            var sm = SnackMachineFactory.Create();
             op.LoadSlots(sm, Product.GetProducts());
 
-            // validate slots
-            var result = true;
-            foreach (var slot in sm.Slots)
-            {
-                if (slot.Products.Count == 0)
-                {
-                    result = false;
-                    break;
-                }
-            }
-            
+            sm.ValidateSlots().Should().BeTrue();
+        }
 
+        [Fact]
+        public void remove_slots_and_validate()
+        {
+            var op = new Operator();
+            var sm = SnackMachineFactory.Create();
+            op.LoadSlots(sm, Product.GetProducts());
 
+            sm.Slots.RemoveAt(0);
+
+            sm.ValidateSlots().Should().BeFalse();
         }
     }
 }
