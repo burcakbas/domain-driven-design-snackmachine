@@ -1,9 +1,12 @@
 ﻿using NHibernate.Event;
+using SnackMachines.Common;
 using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SnackMachines.Common
+namespace SnackMachine.Utils
 {
     internal class EventListener :
         IPostInsertEventListener,

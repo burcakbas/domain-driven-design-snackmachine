@@ -9,19 +9,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{301B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SnackMachine", "SnackMachine", "{D4E07502-5ECE-467F-8B71-14AC9E3ED64B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachine.Domain", "SnackMachine.Domain\SnackMachine.Domain.csproj", "{2A1E8447-2A5A-40CE-BFB9-06B144B4585D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnackMachine.Domain", "SnackMachine.Domain\SnackMachine.Domain.csproj", "{2A1E8447-2A5A-40CE-BFB9-06B144B4585D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{90A09193-4A25-44A1-844B-FD8C65D9088D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachine.Common", "SnackMachine.Common\SnackMachine.Common.csproj", "{26E3E106-8ED0-4F63-A5E2-8C71720D06B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnackMachine.Common", "SnackMachine.Common\SnackMachine.Common.csproj", "{26E3E106-8ED0-4F63-A5E2-8C71720D06B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedKernel", "SharedKernel", "{DA836CE5-C614-4E02-8D16-BF1B2AC2B0BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachine.SharedKernel", "SnackMachine.SharedKernel\SnackMachine.SharedKernel.csproj", "{ADE6BB43-3D35-4A81-B71D-F48A26C7A593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnackMachine.SharedKernel", "SnackMachine.SharedKernel\SnackMachine.SharedKernel.csproj", "{ADE6BB43-3D35-4A81-B71D-F48A26C7A593}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E58B0705-CA1E-44AD-BC5D-81A5CEB04F69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnackMachine.Tests", "SnackMachine.Tests\SnackMachine.Tests.csproj", "{597374BE-1E7A-4802-888F-498C3EA2BF24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SnackMachine.Tests", "SnackMachine.Tests\SnackMachine.Tests.csproj", "{597374BE-1E7A-4802-888F-498C3EA2BF24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Atm", "Atm", "{60EB1683-8B54-43C5-ABFB-B86B11F16CA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atm.Domain", "Atm.Domain\Atm.Domain.csproj", "{F135EE14-00D3-4812-BB56-9BDA5E7A7D63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Management", "Management", "{C9E6BADD-BB03-4D68-9BD1-530622E5599B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Management.Banking", "Management.Banking\Management.Banking.csproj", "{4152BB00-FA60-4B05-AF4D-40CA7824EA65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +53,14 @@ Global
 		{597374BE-1E7A-4802-888F-498C3EA2BF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{597374BE-1E7A-4802-888F-498C3EA2BF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{597374BE-1E7A-4802-888F-498C3EA2BF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F135EE14-00D3-4812-BB56-9BDA5E7A7D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F135EE14-00D3-4812-BB56-9BDA5E7A7D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F135EE14-00D3-4812-BB56-9BDA5E7A7D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F135EE14-00D3-4812-BB56-9BDA5E7A7D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4152BB00-FA60-4B05-AF4D-40CA7824EA65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4152BB00-FA60-4B05-AF4D-40CA7824EA65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4152BB00-FA60-4B05-AF4D-40CA7824EA65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4152BB00-FA60-4B05-AF4D-40CA7824EA65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +74,10 @@ Global
 		{DA836CE5-C614-4E02-8D16-BF1B2AC2B0BB} = {4127DAA9-8266-4B7E-9E50-2DA175A84A05}
 		{ADE6BB43-3D35-4A81-B71D-F48A26C7A593} = {DA836CE5-C614-4E02-8D16-BF1B2AC2B0BB}
 		{597374BE-1E7A-4802-888F-498C3EA2BF24} = {E58B0705-CA1E-44AD-BC5D-81A5CEB04F69}
+		{60EB1683-8B54-43C5-ABFB-B86B11F16CA6} = {301BDC87-A6CC-42A7-B374-6AF9A8668FCF}
+		{F135EE14-00D3-4812-BB56-9BDA5E7A7D63} = {60EB1683-8B54-43C5-ABFB-B86B11F16CA6}
+		{C9E6BADD-BB03-4D68-9BD1-530622E5599B} = {301BDC87-A6CC-42A7-B374-6AF9A8668FCF}
+		{4152BB00-FA60-4B05-AF4D-40CA7824EA65} = {C9E6BADD-BB03-4D68-9BD1-530622E5599B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7BC846B8-B062-4D54-9DE1-DD1E18D34F78}

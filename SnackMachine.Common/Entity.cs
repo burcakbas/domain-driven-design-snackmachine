@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SnackMachines.Common
 {
@@ -52,5 +53,18 @@ namespace SnackMachines.Common
         //    //return NHibernateProxyHelper.GetClassWithoutInitializingProxy(this);
         //    return 
         //}
+
+        private readonly List<IDomainEvent> _domainEvents = new List<IDomainEvent>();
+        public virtual IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents;
+
+        protected virtual void AddDomainEvent(IDomainEvent newEvent)
+        {
+            _domainEvents.Add(newEvent);
+        }
+
+        public virtual void ClearEvents()
+        {
+            _domainEvents.Clear();
+        }
     }
 }

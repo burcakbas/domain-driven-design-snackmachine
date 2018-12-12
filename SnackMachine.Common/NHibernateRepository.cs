@@ -1,7 +1,6 @@
 ﻿using NHibernate;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace SnackMachines.Common
 {
@@ -22,6 +21,14 @@ namespace SnackMachines.Common
             {
                 session.SaveOrUpdate(aggregateRoot);
                 transaction.Commit();
+            }
+        }
+
+        public IList<T> GetAll()
+        {
+            using (ISession session = SessionFactory.OpenSession())
+            {
+                return session.Query<T>().ToList();
             }
         }
     }

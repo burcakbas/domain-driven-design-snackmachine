@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SnackMachine.Common\SnackMachine.Common.csproj" />
+    <ProjectReference Include="..\SnackMachine.SharedKernel\SnackMachine.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>

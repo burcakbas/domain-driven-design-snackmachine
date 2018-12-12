@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Atm.Domain\Atm.Domain.csproj" />
     <ProjectReference Include="..\SnackMachine.Domain\SnackMachine.Domain.csproj" />
   </ItemGroup>
 

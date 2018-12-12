@@ -9,7 +9,7 @@ namespace SnackMachines.Domain
     {
         public IList<Product> GetProducts()
         {
-            
+            //ToDo: extra domain spesifik repo çağrıları buradan
             throw new NotImplementedException();
         }
 
